@@ -77,18 +77,7 @@ public class Szetograph {
   public String decrypt() {
     return extractInformation(prim);
 
-    // returnedString = this.getDecypheredString();
-    // if(returnedString!=null)
-    // {
-    // return returnedString;
-    // }
-    /* Hidden partion */
-    /*
-     * This needs to be returned to. Until I have the write functionality of a
-     * hidden graph I cant do the read
-     */
 
-    // return null;
   }
 
   public boolean setWords(String words) // returns true if successful false if
