@@ -5,9 +5,9 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JFormattedTextField;
 import javax.swing.JEditorPane;
 
+@SuppressWarnings("serial")
 public class popup extends JDialog {
 
   private final JPanel contentPanel = new JPanel();

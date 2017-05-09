@@ -1,25 +1,18 @@
-//hi
-
 import java.awt.Color;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Random;
-import java.util.Scanner;
-
 import javax.swing.JFileChooser;
 import javax.swing.JProgressBar;
-import javax.swing.filechooser.FileSystemView;
-import javax.swing.plaf.ProgressBarUI;
-import javax.xml.crypto.Data;
 
 /*
  * Notes, changing extractInfoFromImage to in real time get characters out. Point of this
  * Is so szeto can stop generating prim when it hits an exit character for extraction
  * 
  */
-public class szetograph {
+public class Szetograph {
 
   protected Picture picture;
   protected String base2Val;
@@ -38,8 +31,8 @@ public class szetograph {
 
   public static void main(String[] args) {
     JProgressBar progressBar = new JProgressBar();
-    szetograph szeto = new szetograph("7980",
-        "D:\\workplace\\szetography\\gunterhidden.png", "hmmIwonderWhatsWRong",
+    Szetograph szeto = new Szetograph("7980",
+        "D:\\workplace\\Szetography\\gunterhidden.png", "hmmIwonderWhatsWRong",
         progressBar);
     System.out.println(szeto.decrypt());
     // szeto.encrypt();
@@ -48,7 +41,7 @@ public class szetograph {
 
   /* psuedo constructor used from GUI */
 
-  public szetograph(String seed, String location, String words,
+  public Szetograph(String seed, String location, String words,
       JProgressBar progressBar) {
     this.seed = Integer.parseInt(seed);
     picture = new Picture(location);
@@ -61,7 +54,7 @@ public class szetograph {
 
   }
 
-  public szetograph(String seed, String location, String words,
+  public Szetograph(String seed, String location, String words,
       JProgressBar progressBar, primMaze otherPrim) {
     this.seed = Integer.parseInt(seed);
     picture = new Picture(location);
@@ -84,7 +77,6 @@ public class szetograph {
   }
 
   public String decrypt() {
-    String returnedString;
     return extractInformation(prim);
 
     // returnedString = this.getDecypheredString();

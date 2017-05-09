@@ -1,11 +1,10 @@
-import java.awt.Image;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 
 import javax.swing.JProgressBar;
 
-public class szetographHidden extends szetograph {
+public class szetographHidden extends Szetograph {
 	protected int hiddenSeed;
 	protected String hiddenWords;
 	protected primMaze hiddenPrim;
@@ -30,9 +29,8 @@ public class szetographHidden extends szetograph {
 							// possibility
 	}
 
-	@Override
 	public void encrypt() {
-		setWords(words);
+    setWords(words);
 		writeInformationToNewImage(prim);
 		hiddenPrim = new primMaze(7980, prim, 2);
 		setWords(hiddenWords);
@@ -45,11 +43,11 @@ public class szetographHidden extends szetograph {
 		extractInformationFromLinkedList(header);
 		System.out.println(getHiddenListInString());// kinda a stub for now
 
-		szetograph getFake = new szetograph("4321", "D:\\workplace\\szetography\\gunterhidden.png", "aids",
+		Szetograph getFake = new Szetograph("4321", "D:\\workplace\\szetography\\gunterhidden.png", "aids",
 				progressBar);
 		System.out.println(getFake.decrypt());
 		// getFake.getPrim().printPrim();
-		szetograph realPrim = new szetograph("7980", "D:\\workplace\\szetography\\gunterhidden.png", "aidz",
+		Szetograph realPrim = new Szetograph("7980", "D:\\workplace\\szetography\\gunterhidden.png", "aidz",
 				progressBar, getFake.getPrim());
 		System.out.println(realPrim.decrypt());
 

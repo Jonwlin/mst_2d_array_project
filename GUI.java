@@ -1,4 +1,3 @@
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -6,17 +5,14 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
-import javax.swing.SwingConstants;
-import javax.swing.JFormattedTextField;
 import javax.swing.JEditorPane;
-import javax.swing.JFileChooser;
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.ActionListener;
-import java.io.File;
 import java.awt.event.ActionEvent;
 import javax.swing.JProgressBar;
 
+@SuppressWarnings("serial")
 public class GUI extends JFrame {
 
   private JPanel contentPane;
@@ -27,7 +23,6 @@ public class GUI extends JFrame {
    * Launch the application.
    */
   public static void main(String[] args) {
-
     EventQueue.invokeLater(new Runnable() {
       public void run() {
         try {
@@ -69,13 +64,14 @@ public class GUI extends JFrame {
       public void actionPerformed(ActionEvent arg0) {
         new Thread() {
           public void run() {
-            szetograph runMe = new szetograph(seed.getText(),
+            Szetograph runMe = new Szetograph(seed.getText(),
                 currentFile.getText(), wordBox.getText(), progressBar);
             runMe.encrypt();
           }
         }.start();
       }
     });
+
     Encrypt.setBounds(93, 21, 113, 30);
     contentPane.add(Encrypt);
 
@@ -95,7 +91,7 @@ public class GUI extends JFrame {
         new Thread() {
           public void run() {
             String words;
-            szetograph runMe = new szetograph(seed.getText(),
+            Szetograph runMe = new Szetograph(seed.getText(),
                 currentFile.getText(), wordBox.getText(), progressBar);
             runMe.decrypt();
             words = runMe.getDecypheredString();
@@ -105,10 +101,11 @@ public class GUI extends JFrame {
 
       }
     });
+
     Decrpyt.setBounds(227, 23, 113, 26);
     contentPane.add(Decrpyt);
 
-    JButton fileChoose = new JButton("Chose Image");
+    JButton fileChoose = new JButton("Choose Image");
     fileChoose.setEnabled(false);
     fileChoose.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent arg0) {
@@ -118,6 +115,7 @@ public class GUI extends JFrame {
          */
       }
     });
+
     fileChoose.setFont(new Font("Comic Sans MS", Font.PLAIN, 15));
     fileChoose.setBounds(21, 347, 175, 26);
     contentPane.add(fileChoose);
