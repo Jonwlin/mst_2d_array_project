@@ -31,11 +31,9 @@ public class Szetograph {
 
   public static void main(String[] args) {
     JProgressBar progressBar = new JProgressBar();
-    Szetograph szeto = new Szetograph("7980",
-        "D:\\workplace\\Szetography\\gunterhidden.png", "hmmIwonderWhatsWRong",
-        progressBar);
-    System.out.println(szeto.decrypt());
-    // szeto.encrypt();
+    Szetograph szeto = new Szetograph("1550", "D:\\Users\\Jonathan\\Downloads\\Gunter.jpg", "hello typer", progressBar);
+    // System.out.println(szeto.decrypt());
+    szeto.encrypt();
     // szeto.getPrim().printPrim();
   }
 
