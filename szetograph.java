@@ -16,7 +16,7 @@ import javax.xml.crypto.Data;
  * Is so szeto can stop generating prim when it hits an exit character for extraction
  * 
  */
-public class Szetograph {
+public class szetograph {
 
 	
 	protected Picture picture;
