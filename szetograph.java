@@ -13,10 +13,10 @@ import javax.swing.plaf.ProgressBarUI;
 import javax.xml.crypto.Data;
 /*
  * Notes, changing extractInfoFromImage to in real time get characters out. Point of this
- * Is so szeto can stop generating prim when it hits an exit character for extraction
+ * Is so mst_graph can stop generating prim when it hits an exit character for extraction
  * 
  */
-public class szetograph {
+public class mst_graph {
 
 	
 	protected Picture picture;
@@ -37,17 +37,17 @@ public class szetograph {
 	public static void main(String[] args)
 	{
 		JProgressBar progressBar = new JProgressBar();
-		szetograph szeto = new szetograph("4321", "D:\\workplace\\szetography\\gunterhidden.png","hmmIwonderWhatsWRong", progressBar);
-		System.out.println(szeto.decrypt());
-	//	szeto.encrypt();
-		//szeto.getPrim().printPrim();
+		mst_graph graph = new mst_graph("4321", "D:\\workplace\\mst_graph\\gunterhidden.png","hmmIwonderWhatsWRong", progressBar);
+		System.out.println(mst_graph.decrypt());
+	//	mst_graph.encrypt();
+		//mst_graph.getPrim().printPrim();
 	}
 
 	
 	
 	/*psuedo constructor used from GUI  */
 	
-	public szetograph(String seed, String location, String words,JProgressBar progressBar)
+	public mst_graph(String seed, String location, String words,JProgressBar progressBar)
 	{
 		this.seed = Integer.parseInt(seed);
 		picture = new Picture(location);
@@ -61,7 +61,7 @@ public class szetograph {
 	}
 	
 
-	public szetograph(String seed, String location, String words,JProgressBar progressBar,primMaze otherPrim)
+	public mst_graph(String seed, String location, String words,JProgressBar progressBar,primMaze otherPrim)
 	{
 		this.seed = Integer.parseInt(seed);
 		picture = new Picture(location);
