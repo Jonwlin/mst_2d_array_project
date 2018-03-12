@@ -44,7 +44,7 @@ public class GUI extends JFrame {
 	 * Create the frame.
 	 */
 	public GUI() {
-		setTitle("SzetoGraphy");
+		setTitle("MST GRAPH");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 441, 556);
 		contentPane = new JPanel();
@@ -70,7 +70,7 @@ public class GUI extends JFrame {
 				new Thread()
 				{
 				    public void run() {
-						szetograph runMe = new szetograph(seed.getText(),currentFile.getText(), wordBox.getText(),progressBar);
+						mst_graph runMe = new mst_graph(seed.getText(),currentFile.getText(), wordBox.getText(),progressBar);
 						runMe.encrypt();
 				    }
 				}.start();
@@ -96,7 +96,7 @@ public class GUI extends JFrame {
 				{
 				    public void run() {
 				    	String words;
-						szetograph runMe = new szetograph(seed.getText(),currentFile.getText(), wordBox.getText(),progressBar);
+						mst_graph runMe = new mst_graph(seed.getText(),currentFile.getText(), wordBox.getText(),progressBar);
 						runMe.decrypt();
 						words = runMe.getDecypheredString();
 						wordBox.setText(words);
