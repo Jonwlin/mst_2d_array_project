@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 import javax.swing.JProgressBar;
 
-public class szetographHidden extends szetograph {
+public class mst_hidden extends mst_graph {
 	protected int hiddenSeed;
 	protected String hiddenWords;
 	protected primMaze hiddenPrim;
@@ -13,14 +13,14 @@ public class szetographHidden extends szetograph {
 	public static void main(String[] args)
 	{
 		JProgressBar progressBar = new JProgressBar();
-		szetographHidden szeto = new szetographHidden("4321", "D:\\workplace\\szetography\\gunter.png","fakoLOL", progressBar,"7980","theReal");
-		//szeto.decryptDebug();
+		mst_hidden graph = new mst_hidden("4321", "D:\\workplace\\mst_graph\\gunter.png","fakoLOL", progressBar,"7980","theReal");
+		//graph.decryptDebug();
 	
-		szeto.encrypt();
+		graph.encrypt();
 	}
 
 
-	public szetographHidden(String seed, String location, String words, JProgressBar progressBar,String hiddenSeed,String hiddenWords) {
+	public mst_hidden(String seed, String location, String words, JProgressBar progressBar,String hiddenSeed,String hiddenWords) {
 		super(seed, location, words, progressBar);
 		// TODO Auto-generated constructor stub
 		this.hiddenSeed = Integer.parseInt(hiddenSeed);
@@ -44,10 +44,10 @@ public class szetographHidden extends szetograph {
 		extractInformationFromLinkedList(header);
 		System.out.println(getHiddenListInString());// kinda a stub for now
 		
-		szetograph getFake = new szetograph("4321", "D:\\workplace\\szetography\\gunterhidden.png", "aids", progressBar);
+		mst_graph getFake = new mst_graph("4321", "D:\\workplace\\mst_graph\\gunterhidden.png", "aids", progressBar);
 		System.out.println(getFake.decrypt());
 	//	getFake.getPrim().printPrim();
-		szetograph realPrim = new szetograph("7980", "D:\\workplace\\szetography\\gunterhidden.png", "aidz", progressBar, getFake.getPrim());
+		mst_graph realPrim = new mst_graph("7980", "D:\\workplace\\mst_graph\\gunterhidden.png", "aidz", progressBar, getFake.getPrim());
 		System.out.println(realPrim.decrypt());
 
 	}
