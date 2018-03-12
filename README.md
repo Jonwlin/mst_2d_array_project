@@ -9,3 +9,5 @@ The next step was deciding which cells to store information in based on the path
 The weights from each cell to the next is determined by a seed either randomly generated or provided. 
 
 The resulting 2d array stores information within an unknown path which can only be deciphered by using the seed to generate weights for the paths again. 
+
+Worked on by Jonathan Lin and Tyler Szeto from Sept 2016 to Feb 2017
