@@ -1,5 +1,7 @@
 # Minimum Spanning Tree on a 2D Array
 
+Paper here https://drive.google.com/file/d/1QXZ1eLMx5ohVOVE5L5S0BjD4IB6v_bWd/view?usp=sharing
+
 This project is dedicted to modifying a minimum spanning tree algorithm to distort an image or text based on a seed input.
 
 The first step is storing information in a 2d array or image. By editing the least significant bit of a cell, we could visually hide a significant amount of information in a small image.
